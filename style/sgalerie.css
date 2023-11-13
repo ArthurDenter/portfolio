@@ -52,7 +52,7 @@
 .content-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1.5fr 1fr 1fr 0.5fr 2fr 2fr 1fr;
 }
 
 .content-section img {
@@ -85,15 +85,29 @@
     margin: 0;
 }
 
-.content-container-diner {
+.content-container-concept {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.content-container-logo-variations {
+.content-container-graphic-concept{
     grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.content-container-fassade-concept{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.content-container-logo{
+    grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
@@ -104,40 +118,61 @@
     color: #FF2E00;
     font-size: 1.333rem;
     padding: 1rem;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
-}
-
-.content-container-stopper {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
 }
 
-.content-container-web-1 {
+.content-container-photowall {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 7;
 }
 
 .content-container-description-2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 7;
-    background-color: #0A210F;
-    color: #ffffff;
-    font-size: 1.333rem;
-    padding: 1rem;
-}
-
-.content-container-web-2 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 7;
     grid-row-end: 8;
+    background-color: white;
+    color: #FF2E00;
+    font-size: 1.333rem;
+    padding: 1rem;
+}
+
+.content-container-illustration {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.content-container-ceiling-illustration {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+.content-container-ceiling-brewing-process{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+.content-container-implementation-brewing-process{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+.content-container-parking{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 11;
+    grid-row-end: 12;
 }
