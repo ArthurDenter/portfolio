@@ -51,13 +51,15 @@
 
 .content-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr; */
 }
 
 .content-section img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .content-section div {
