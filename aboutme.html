@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jörg Adomaitis Portfolio – About Me</title>
+    <meta name="description"
+        content="Welcome to  Jörg Adomaitis Portfolio Website, a showcase of branding, UI/UX, and logo design projects. Here, you'll find a collection of six carefully selected works that highlight my skills and creativity. Whether you're looking for inspiration or seeking to collaborate on a project, my portfolio is the perfect place to start.">
+    <title>Portfolio — Über mich</title>
+    <link rel="stylesheet" href="/style/defaults.css">
+    <link rel="stylesheet" href="/style/aboutme.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ava1qta.css">
 </head>
 <body>    
     <header>
-        <nav>
-            <a href="index.html" alt="Jörg Adomaitis">Home<img src=""></a>
-            <a href="#" alt="A selection of branding, UI/UX, and logo design projects I am proud of">Projects</a>
-            <a href="aboutme.html"
-                alt="More Details about me, the way I like to design, my education, my skills and my experience I have so far">About
-                Me</a>
-            <a href="#"
-                alt="If you are interested in a collaboration or would like to leave me comments on my portfolio, you can use the webform or contact me directly">Contact</a>
+        <nav class="navbar">
+            <div class="logo-container"><img src="/material/navbar-logo.svg" alt=""></div>
+            <div class="title-container">
+                <h1>Portfolio — Über mich</h1>
+            </div>
+            <div class="dropdown-container"><img src="/material/index/button_hamburger.svg" alt="">
+                <!-- <a href="#" alt="Jörg Adomaitis"><img src=""></a>
+                <a href="#" alt="A selection of branding, UI/UX, and logo design projects I am proud of">Projects</a>
+                <a href="aboutme.html"
+                    alt="More Details about me, the way I like to design, my education, my skills and my experience I have so far">About Me</a>
+                <a href="#" alt="If you are interested in a collaboration or would like to leave me comments on my portfolio, you can use the webform or contact me directly">Contact</a> -->
+            </div>
         </nav>
     </header>
-    <section><img src="" alt="">
+    <section class="content-section">
+        <div class="content-portrait"><img class="content-portrait-image" src="/material/aboutme/joerg.jpg" alt=""></div>
         <h1>I love being outside in nature. The moments out there show me how unique, diverse and unfortunately also
             vulnerable our nature is. We have so much to learn, especially about our understanding of our roles. Let's
             define design as a broader term and work on making things better – with a real added value for people and
@@ -26,14 +37,14 @@
             <br>Hello, my name is Jörg and I’am a Designer.
         </h1>
     </section>
-    <section>
+    <section class="content-section">
         <h1>Education</h1>
         <ol>
             <li>Diplomstudiengang Medientechnik Fachhochschule Düsseldorf<br>09/2000 — 06/2009</li>
             <li>Bachelor of Arts (B.A.) Kommunikationsdesign Fachhochschule Düsseldorf<br>06/2012 — 03/2015</li>
         </ol>
     </section>
-    <section>
+    <section class="content-section">
         <h1>Experience</h1>
         <ol>
         <li>Digital Artist / Systemadministrator<br>
@@ -46,13 +57,13 @@
             03/2015 — 06/2019</li>        
         <li>Teamleiter/Designmanager bei Schwitzke Identity<br>
             Design GmbH (ehem. Schwitzke Graphics)<br>
-            seit 06/2019</li>
+            06/2019 — 01/2023</li>
         </ol>
     </section>
-    <section>
+    <section class="content-section">
         <h1>Skills</h1>
         <ul>
-            <li>Branding + Identity</li>
+            <li>Branding & Identity</li>
             <li>Creative Direction</li>
             <li>Art Direction</li>
             <li>UI/UX</li>
@@ -69,13 +80,17 @@
             <li>Lightroom</li>
             <li>After Effects</li>
             <li>Figma</li>
-            <li>CSS3 / HTML5 / Javascript</li>
+            <li>CSS/HTML/JS</li>
         </ul>
     </section>
-    <footer>
-        <a href="aboutme.html">© Jörg Adomaitis</a>
-        <a href="#" alt="If you are interested in a collaboration or would like to leave me comments on my portfolio, you can use the webform or contact me directly">Contact</a>
-        <a href="#" alt="Have a look at my LinkedIn Profile">LinkedIn</a>
+    <footer class="footer">
+        <div><a href="aboutme.html">© Jörg Adomaitis</a></div>
+        <div class="footer-links">
+            <a href="#"
+                alt="If you are interested in a collaboration or would like to leave me comments on my portfolio, you can use the webform or contact me directly">Kontakt</a>
+            <a href="#" alt="Have a look at my LinkedIn Profile">LinkedIn</a>
+            <a href="#" alt="">GitHub</a>
+        </div>
     </footer>
 </body>
 </html>

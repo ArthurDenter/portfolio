@@ -390,7 +390,7 @@ body {
     font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
     font-style: normal;
-    background-color: #F1F1F1;
+    /* background-color: #F1F1F1; */
 }
 
 h1,

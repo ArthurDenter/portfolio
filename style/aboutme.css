@@ -1,0 +1,103 @@
+.navbar,
+.footer {
+    background-color: #0A210F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0 0.562rem 0 0.562rem;
+}
+
+.footer {
+    padding: 1rem 0.562rem 3rem 0.562rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar img {
+    max-height: 1.2rem;
+}
+
+.navbar h1 {
+    color: #ACD2ED;
+    font-size: 1rem;
+}
+
+.navbar a,
+.footer a {
+    color: #ACD2ED;
+    text-decoration: none;
+}
+
+.navbar a:visited,
+.footer a:visited {
+    color: #ACD2ED;
+}
+
+.navbar a:hover,
+.footer a:hover {
+    color: #ACD2ED;
+    text-decoration: underline;
+}
+
+.navbar a:active,
+.footer a:active {
+    color: #ACD2ED;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+  }
+
+ul {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.content-portrait{
+    display: block;
+    text-align: center;
+    /* background-color: #FF2E00; */
+    padding: 3rem 1.5rem 3rem 1.5rem;
+}
+
+.content-portrait-image{
+    width: 40vw;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.content-section{
+    padding-bottom: 3rem;
+}
+
+.content-section div {
+    overflow: hidden;
+}
+
+.content-section h1 {
+    font-size: 1.771rem;
+    font-weight: 400;
+    color: #FF2E00;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 3rem 3rem 3rem;
+    margin: 0;
+}
+
+.content-section li {
+    background-color: white;
+    color: #FF2E00;
+    font-size: 1.333rem;
+    padding: 1rem;
+}
