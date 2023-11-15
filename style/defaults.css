@@ -399,3 +399,74 @@ h3 {
     font-weight: 400;
     font-style: normal;
 }
+
+.navbar,
+.footer {
+    background-color: #0A210F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0 0.562rem 0 0.562rem;
+    overflow: hidden;
+}
+
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer {
+    padding: 1rem 0.562rem 3rem 0.562rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar img {
+    max-height: 1.2rem;
+}
+
+.navbar h1 {
+    color: #ACD2ED;
+    font-size: 1rem;
+}
+
+.navbar a,
+.footer a {
+    color: #ACD2ED;
+    text-decoration: none;
+}
+
+.navbar a:visited,
+.footer a:visited {
+    color: #ACD2ED;
+}
+
+.navbar a:hover,
+.footer a:hover {
+    color: #ACD2ED;
+    text-decoration: underline;
+}
+
+.navbar a:active,
+.footer a:active {
+    color: #ACD2ED;
+}
+
+.get-back-container img{
+    max-height: 1rem;
+}
+
+.content-section{
+    padding-top: 0;
+}
+
+.content-section-fixed{
+    padding-top: 2.5rem;
+}
