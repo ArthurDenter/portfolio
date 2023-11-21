@@ -36,6 +36,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 .project-container-description:nth-child(odd) {

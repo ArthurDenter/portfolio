@@ -1,5 +1,5 @@
-ul,
-ol {
+.content-section ul,
+.content-section ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -7,13 +7,15 @@ ol {
 
 }
 
-ul {
+.content-section ul {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
 }
 
-.content-container-sayhi, .content-container-button {
+.content-container-sayhi,
+.content-container-button,
+p {
     display: block;
     text-align: center;
     /* background-color: #FF2E00; */
@@ -21,7 +23,7 @@ ul {
 }
 
 .content-container-sayhi h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #0A210F;
     text-align: center;
@@ -30,7 +32,7 @@ ul {
 }
 
 .content-sayhi-image {
-    width: 10vmax;
+    width: 35vmax;
     object-fit: cover;
 }
 
@@ -45,18 +47,21 @@ ul {
 
 .content-section label {
     font-size: 1.333rem;
-    color: #FF2E00;
+    color: #0A210F;
     text-align: left;
-    padding-left: 3rem;
-    margin: 0;
+    position: relative;
+    top: 1.15rem;
+    left: 3rem;
+    background-color: white;
 }
 
-.content-section input[type=text] {
+.content-section input[type=text],
+.content-section input[type=email] {
     background-color: white;
-    color: #FF2E00;
-    font-size: 1rem;
-    padding: 1rem;
-    border: 1px solid #FF2E00;
+    color: #0A210F;
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid #0A210F;
     border-radius: 3rem;
     width: 100%;
     text-decoration: none;
@@ -72,9 +77,15 @@ ul {
     margin-bottom: 3rem;
 }
 
-.content-section input[type=text]:focus,
-.content-section textarea:focus {
-    border: 4px solid #FF2E00;
+label:has(~input[type=text]:focus),
+label:has(~input[type=email]:focus),
+label:has(~textarea:focus) {
+    font-weight: bold;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
     outline: none;
 }
 
@@ -86,16 +97,17 @@ ul {
 .content-section textarea {
     width: 100%;
     height: 30vmax;
-    border: 1px solid #FF2E00;
+    border: 1px solid #0A210F;
     resize: none;
     border-radius: 1.5rem;
     margin-top: 0.5rem;
     padding: 1.5rem 3rem 1.5rem 3rem;
     background-color: white;
-    color: #FF2E00;
+    color: #0A210F;
+    font-size: 1.25rem;
 }
 
-.content-section input[type=submit] {
+.content-section button {
     background-color: #FF2E00;
     border: none;
     color: white;
@@ -108,3 +120,29 @@ ul {
     font-size: 1.333rem;
 }
 
+p {
+    padding: 0rem;
+    color: #0A210F;
+    font-size: 1.5rem;
+}
+
+/* p::before {
+    content: "* ";
+    color: #FF2E00;
+} */
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 0.25;
+    color: #0A210F;
+}
+
+input:invalid {
+    color: #FF2E00;
+}
+
+label:has(~input:required)::after,
+label:has(~textarea:required)::after {
+    content: "*";
+    color: #FF2E00;
+}
