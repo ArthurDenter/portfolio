@@ -1,61 +1,204 @@
-.content-section ul, .content-section ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    
-  }
-
-  .content-section ul {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
+.content-section{
+    display: grid;
+    background-color: white;
 }
 
-.content-portrait{
-    display: block;
-    text-align: center;
-    /* background-color: #FF2E00; */
-    padding: 3rem 1.5rem 3rem 1.5rem;
+article{
+    padding: 8rem 2rem 8rem 2rem;
 }
 
-.content-portrait-image{
-    width: 35vw;
+.name>div, .address>div, .skills>div, .motivation>div, .content-portrait-container{
+    background-color: white;
+    padding: 1rem;
+}
+
+.timeline-container{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    display: flex;
+}
+
+.timeline{
+    width: 0.1rem;
+    height: 90%;
+    background-color: #0A210F;
+    margin: auto;
+}
+
+.content-portrait-container{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.portrait{
+    width: 30vw;
     border-radius: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-.content-section{
-    padding-bottom: 3rem;
+.name{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.name h1{
+    font-family: "ppmigra";
+    font-size: 6rem;
+    line-height: 6rem;
+    letter-spacing: -0.09rem;
+    color: #0A210F;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.address{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.address p{
+    font-family: "ppagrandir-wide";
+    text-align: center;
+    font-size: 1.5rem;
+    margin:0;
+    color: #0A210F;
+    letter-spacing: 0.05rem;
+
+}
+
+.content-section ul, .content-section ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ .skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .content-section div {
     overflow: hidden;
 }
 
-.content-section h1 {
-    font-size: 1.771rem;
-    font-weight: 400;
-    color: #FF2E00;
-    background-color: #ffffff;
-    text-align: center;
-    padding: 1.5rem 3rem 3rem 3rem;
-    margin: 0;
+.skills{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
-.content-section h1:nth-child(1){
-    text-decoration:underline;
-}
-
-.content-section li {
-    background-color: white;
-    color: #FF2E00;
+.skills li {
+    display: inline;
+    color: #0A210F;
     font-size: 1.333rem;
-    padding: 1rem;
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    border: 0.1rem solid #0A210F;
     -moz-hyphens: auto;
    -o-hyphens: auto;
    -webkit-hyphens: auto;
    -ms-hyphens: auto;
    hyphens: auto; 
+   border-radius: 3rem;
+}
+
+.motivation{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.motivation h1 {
+    font-family: "ppmigra";
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #0A210F;
+    text-align: center;
+    padding: 0 3rem 0 3rem;
+    margin: 0;
+}
+
+#experience{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.experience ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+}
+
+.experience-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+}
+
+.experience-siblings{
+    display: flex;
+    align-items: top;
+    margin-top: 4rem;
+}
+
+.experience-siblings-timeline{
+    height: 0.1rem;
+    width: 50%;
+    background-color: #0A210F;
+    margin-top: 2.5rem;
+}
+
+.experience-description{
+    font-size: 1.333rem;
+}
+
+.experience-date{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 0.1rem solid #0A210F;
+    color: white;
+    background-color: #0A210F;
+    border-radius: 3rem;
+    margin: 0.5rem;
+    width: fit-content;
+    font-family: "ppagrandir-grande";
+}
+
+.projects{
+    text-align: center;
+    padding: 4rem 2rem 12rem 2rem;
+}
+
+.projects p{
+    font-family: "ppagrandir-wide";
+    text-align: center;
+    font-size: 0.75rem;
+    margin:0;
+    color: #0A210F;
+    letter-spacing: 0.05rem;
+
+}
+
+.active h1{
+    color: blue;
 }

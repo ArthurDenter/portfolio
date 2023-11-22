@@ -4,13 +4,16 @@
 }
 
 .project-motivation {
-    padding: 1.8rem 3.6rem 1.8rem 3.6rem;
-    text-align: center;
+    padding: 8rem 5rem 8rem 8rem;
+    font-family: "ppmigra";
+    font-weight: 400;
     color: #0A210F;
+    text-align: center;
+    margin: 0;
 }
 
 .project-motivation h1 {
-    font-size: 3rem;
+    font-size: 3.6rem;
 }
 
 .project-article .project-container-image {
@@ -29,7 +32,7 @@
     flex: 0 0 50%;
     aspect-ratio: 1.06/1;
     background-color: white;
-    color: #FF2E00;
+    color: #0A210F;
     font-size: 1.333rem;
     overflow: hidden;
     padding: 1rem;
