@@ -199,6 +199,6 @@ article{
 
 }
 
-.active h1{
+.active h1, .active p, #active{
     color: blue;
 }
