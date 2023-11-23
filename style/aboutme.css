@@ -199,6 +199,10 @@ article{
 
 }
 
-.active h1, .active p, #active{
+.active h1, .active p, #active, mark{
     color: blue;
+}
+
+mark{
+    background-color: transparent;
 }

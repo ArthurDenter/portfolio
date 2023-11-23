@@ -9,29 +9,50 @@ function updateSize() {
     windowWidth = window.innerWidth;
 }
 
+function extractMarkContent(input) {
+    const regex = /<mark>(.*?)<\/mark>/s;
+    const match = input.match(regex);
+    return match ? match[1] : input;
+}
+
 updateSize();
 window.addEventListener("resize", updateSize);
 window.addEventListener("scroll", (e) => {
     const name = document.getElementById("name_container");
     const address = document.getElementById("address_container");
     const skills = document.getElementById("skills_container");
-    const motivation = document.getElementById("motivation_container");
+    const motivation = document.getElementById("motivation_content");
     const experience = document.getElementById("experience_container");
 
+    //Abstand zum oberen Rand im Browserfenster
     let nameOffsetTop = name.offsetTop;
     let addressOffsetTop = address.offsetTop;
     let skillsOffsetTop = skills.offsetTop;
+    let motivationOffsetTop = motivation.offsetTop;
+    let experienceOffsetTop = experience.offsetTop;
 
+    //relativer Abstand zum oberen Rand im Browserfenster — abhängig von Scrollposition
     let nameRelativeOffsetTop = nameOffsetTop - window.scrollY;
     let addressRelativeOffsetTop = addressOffsetTop - window.scrollY;
     let skillsRelativeOffsetTop = skillsOffsetTop - window.scrollY;
+    let motivationRelativeOffsetTop = motivationOffsetTop - window.scrollY;
+    let experienceRelativeOffsetTop = experienceOffsetTop - window.scrollY;
 
     let skillArr = document.querySelectorAll(".skill");
-    let skillsContainerHeight = skills.offsetHeight;
-    let delta = skillsContainerHeight / skillArr.length; //scrollablePixelPerSkill
-    let skillContainerPerScroll = Math.floor(((windowHeight / 2) - skillsRelativeOffsetTop) / delta);
+    let wordArrFromMotivation = motivation.innerText.split(" ");
 
-    if (scrollPosition < window.scrollY){
+    let skillsContainerHeight = skills.offsetHeight;
+    let motivationContainerHeight = motivation.offsetHeight;
+
+    let deltaSkills = skillsContainerHeight / skillArr.length; //scrollablePixelPerSkill
+    let deltaMotivation = motivationContainerHeight / wordArrFromMotivation.length; //scrollablePixelPerWord
+
+    let skillContainerPerScroll = Math.floor(((windowHeight / 2) - skillsRelativeOffsetTop) / deltaSkills);
+    let motivationWordsPerScroll = Math.floor(((windowHeight / 2) - motivationRelativeOffsetTop) / deltaMotivation);
+
+
+    //Bestimmt ob in positiver oder negativer Richtung gescrollt wird. <--- in Funktion umwandeln
+    if (scrollPosition < window.scrollY) {
         positiveScrollDirection = true;
         scrollPosition = window.scrollY;
     } else {
@@ -39,12 +60,14 @@ window.addEventListener("scroll", (e) => {
         scrollPosition = window.scrollY;
     }
 
-    console.log(`delta : ${delta}`);
+    console.log("---------------------------------------");
+    console.log(`Anzahl der Wörter: ${wordArrFromMotivation.length}`)
+    console.log(`deltaMotivation : ${deltaMotivation}`);
     console.log(`window.scrollY: ${window.scrollY}`);
     console.log(`browser center (cap): ${windowHeight / 2}`)
 
-    console.log(`skillsRelativeOffsetTop: ${skillsRelativeOffsetTop}`);
-    console.log(`skillContainerPerScroll: ${skillContainerPerScroll}`);
+    console.log(`motivationRelativeOffsetTop: ${motivationRelativeOffsetTop}`);
+    console.log(`motivationWordsPerScroll: ${motivationWordsPerScroll}`);
     console.log(`positiveScrollDirection: ${positiveScrollDirection}`);
 
 
@@ -62,29 +85,56 @@ window.addEventListener("scroll", (e) => {
             address.classList.remove("active");
     };
 
-    if (skillContainerPerScroll <= 16 && skillContainerPerScroll >= 0){
-        if ( positiveScrollDirection === true && (skillArr.item(skillContainerPerScroll).getAttribute("id") === null )) {
+    if (skillContainerPerScroll < skillArr.length && skillContainerPerScroll >= 0) {
+        if (positiveScrollDirection === true && (skillArr.item(skillContainerPerScroll).getAttribute("id") === null)) {
             console.log("play – active hinzugefügt");
-            for (let i = 0; i<= skillContainerPerScroll; i++){
+            for (let i = 0; i <= skillContainerPerScroll; i++) {
                 skillArr.item(i).setAttribute("id", "active");
             };
-        }else if (positiveScrollDirection === false && (skillArr.item(skillContainerPerScroll).getAttribute("id") === "active")) {
+        } else if (positiveScrollDirection === false && (skillArr.item(skillContainerPerScroll).getAttribute("id") === "active")) {
             console.log("reverse – active reset");
-            for (let i = 0; i <16; i++){
+            for (let i = 0; i <= skillArr.length - 1; i++) {
                 skillArr.item(i).removeAttribute("id");
             };
             console.log("reverse – active renew");
-            for (let j = 0; j<= skillContainerPerScroll; j++){
+            for (let j = 0; j <= skillContainerPerScroll; j++) {
                 skillArr.item(j).setAttribute("id", "active");
             };
         };
-    }else if (skillContainerPerScroll <0) {
-        skillArr.item(0).removeAttribute("id")
-    }else if (skillContainerPerScroll >16){
-        for (let j = 0; j<= 16; j++){
+    } else if (skillContainerPerScroll < 0) {
+        for (let j = 0; j <= skillArr.length - 1; j++) {
+            skillArr.item(j).removeAttribute("id");
+        };
+    } else if (skillContainerPerScroll > 16) {
+        for (let j = 0; j <= skillArr.length - 1; j++) {
             skillArr.item(j).setAttribute("id", "active");
         };
     };
 
-    
+    if (motivationWordsPerScroll < wordArrFromMotivation.length && motivationWordsPerScroll >= 0) {
+        if (positiveScrollDirection === true) {
+            for (let i = 0; i <= motivationWordsPerScroll; i++) {
+                wordArrFromMotivation[i] = "<mark>" + wordArrFromMotivation[i] + "</mark>";
+            };
+        } else if (positiveScrollDirection === false) {
+            for (let i = 0; i <= wordArrFromMotivation.length - 1; i++) {
+                wordArrFromMotivation[i] = extractMarkContent(wordArrFromMotivation[i]);
+            };
+            for (let i = 0; i <= Math.min(wordArrFromMotivation.length - 1, motivationWordsPerScroll); i++) {
+                wordArrFromMotivation[i] = "<mark>" + wordArrFromMotivation[i] + "</mark>";
+            };
+        }
+    }
+    else if (motivationWordsPerScroll < 0) {
+        for (let i = 0; i <= wordArrFromMotivation.length - 1; i++) {
+            wordArrFromMotivation[i] = extractMarkContent(wordArrFromMotivation[i]);
+        };
+    } else if (motivationWordsPerScroll >= wordArrFromMotivation.length) {
+        for (let i = 0; i <= wordArrFromMotivation.length - 1; i++) {
+            wordArrFromMotivation[i] = "<mark>" + wordArrFromMotivation[i] + "</mark>";
+        };
+    };
+    motivation.innerHTML = wordArrFromMotivation.join(" ");
+
+
 });
