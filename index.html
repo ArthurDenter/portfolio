@@ -8,40 +8,44 @@
     <meta name="description"
         content="Welcome to  Jörg Adomaitis Portfolio Website, a showcase of branding, UI/UX, and logo design projects. Here, you'll find a collection of six carefully selected works that highlight my skills and creativity. Whether you're looking for inspiration or seeking to collaborate on a project, my portfolio is the perfect place to start.">
     <title>Portfolio — Jörg Adomaitis</title>
-    <link rel="stylesheet" href="/style/defaults.css">
-    <link rel="stylesheet" href="/style/aboutme.css">
+    <link rel="stylesheet" href="/landing/style/defaults.css">
+    <link rel="stylesheet" href="/landing/style/aboutme.css">
     <link rel="stylesheet" href="https://use.typekit.net/ava1qta.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar" id="navbar">
-            <div class="logo-container"><a href="/index.html"><img src="/material/default/navbar-logo.svg" alt=""></a>
+            <div class="logo-container"><a href="/index.html"><img src="/landing/content/default/navbar-logo.svg" alt=""></a>
             </div>
             <div class="title-container">
                 <h1>Portfolio — Jörg Adomaitis</h1>
             </div>
             <div class="menubutton-container" id="menubutton-container"><img
-                    src="/material/default/button_hamburger.svg" alt="">
+                    src="/landing/content/default/button_hamburger.svg" alt="">
             </div>
         </nav>
         <div class="menu-container" id="menu-container">
             <div>
                 <ul>
-                    <li><a href="/projects.html">Projekte</a></li>
+                    <li><a href="/projects/projects.html">Projekte</a></li>
                     <li><a href="/index.html">Über mich</a></li>
                     <li><a href="/contact.html">Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <script src="/script/activator.js"></script>
+    <script src="/landing/script/activator.js"></script>
     <section class="content-section" id="content-section">
         <div class="timeline-container">
             <div class="timeline line" id="timeline" id="line"></div>
         </div>
+        <!-- Implement later!         
+        <div class="timemarker-container">
+            <div class="timemarker point" id="timemarker"></div>
+        </div> -->
         <article class="content-portrait-container">
-            <div><img class="portrait" id="portrait" src="/material/aboutme/joerg.jpg" alt=""></div>
+            <div><img class="portrait" id="portrait" src="/landing/content/aboutme/joerg.jpg" alt=""></div>
         </article>
         <article class="container name" id="name">
             <div id="name_container">
@@ -65,6 +69,7 @@
                 <ul class="skillset" id="skillset">
                     <li class="skill">Branding & Identity</li>
                     <li class="skill">Art Direction</li>
+                    <li class="skill">Strategie</li>
                     <li class="skill">UI/UX</li>
                     <li class="skill">Typografie</li>
                     <li class="skill">Konzeptentwicklung</li>
@@ -93,7 +98,7 @@
             <div id="experience_container">
                 <ul>
                     <li>
-                        <div class="experience-container">
+                        <div class="experience-container-li">
                             <div class="experience-description">
                                 Diplomstudiengang Medientechnik <br>
                                 Fachhochschule Düsseldorf
@@ -104,7 +109,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="experience-container">
+                        <div class="experience-container-li">
                             <div class="experience-description">
                                 Digital Artist / Systemadministrator<br>
                                 bei First Rabbit GmbH, Köln
@@ -116,7 +121,7 @@
                     </li>
                     <li>
                         <div class="experience-siblings">
-                            <div class="experience-container">
+                            <div class="experience-container-li">
                                 <div class="experience-date">
                                     6/2012 — 03/2015
                                 </div>
@@ -126,7 +131,7 @@
                                 </div>
                             </div>
                             <div class="experience-siblings-timeline"></div>
-                            <div class="experience-container">
+                            <div class="experience-container-li">
                                 <div class="experience-date">
                                     09/2012 — 03/2015
                                 </div>
@@ -137,7 +142,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="experience-container">
+                        <div class="experience-container-li">
                             <div class="experience-date">
                                 03/2015 — 06/2019
                             </div>
@@ -148,7 +153,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="experience-container">
+                        <div class="experience-container-li">
                             <div class="experience-date">
                                 06/2019 — 01/2023
                             </div>
@@ -163,14 +168,14 @@
         </article>
         <article class="projects" id="projects">
             <div class="projects-link">
-                <a href="/projects.html"><img src="/material/aboutme/projects_button.svg" alt=""></a>
-                <p>(passwortgeschützter Bereich)</p>
+                <a href="/projects/projects.html"><img src="/landing/content/aboutme/projects_button.svg" alt=""></a>
+                <p>(passwortgeschützter Bereich) <br> Bei Interesse schicke ich Ihnen gerne Ihre persönlichen Zugangsdaten zu. <br> Hinterlassen Sie mir dafür <a href="/contact.html">hier</a> eine kurze Nachricht.</p>
             </div>
         </article>
     </section>
-    <script src="/script/navscript.js"></script>
+    <script src="/landing/script/navscript.js"></script>
     <footer class="footer">
-        <div><a href="index.html">© Jörg Adomaitis</a></div>
+        <div><a href="/index.html">© Jörg Adomaitis</a></div>
         <div class="footer-links">
             <a href="/contact.html"
                 alt="If you are interested in a collaboration or would like to leave me comments on my portfolio, you can use the webform or contact me directly">Kontakt</a>

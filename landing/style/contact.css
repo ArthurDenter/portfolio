@@ -126,10 +126,10 @@ p {
     font-size: 1.5rem;
 }
 
-/* p::before {
+p::before {
     content: "* ";
     color: #FF2E00;
-} */
+}
 
 input::placeholder,
 textarea::placeholder {

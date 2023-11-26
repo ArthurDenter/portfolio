@@ -60,15 +60,15 @@ window.addEventListener("scroll", (e) => {
         scrollPosition = window.scrollY;
     }
 
-    console.log("---------------------------------------");
-    console.log(`Anzahl der Wörter: ${wordArrFromMotivation.length}`)
-    console.log(`deltaMotivation : ${deltaMotivation}`);
-    console.log(`window.scrollY: ${window.scrollY}`);
-    console.log(`browser center (cap): ${windowHeight / 2}`)
+    // console.log("---------------------------------------");
+    // console.log(`Anzahl der Wörter: ${wordArrFromMotivation.length}`)
+    // console.log(`deltaMotivation : ${deltaMotivation}`);
+    // console.log(`window.scrollY: ${window.scrollY}`);
+    // console.log(`browser center (cap): ${windowHeight / 2}`)
 
-    console.log(`motivationRelativeOffsetTop: ${motivationRelativeOffsetTop}`);
-    console.log(`motivationWordsPerScroll: ${motivationWordsPerScroll}`);
-    console.log(`positiveScrollDirection: ${positiveScrollDirection}`);
+    // console.log(`motivationRelativeOffsetTop: ${motivationRelativeOffsetTop}`);
+    // console.log(`motivationWordsPerScroll: ${motivationWordsPerScroll}`);
+    // console.log(`positiveScrollDirection: ${positiveScrollDirection}`);
 
 
     if (nameRelativeOffsetTop < (windowHeight / 2)) {
@@ -85,18 +85,36 @@ window.addEventListener("scroll", (e) => {
             address.classList.remove("active");
     };
 
+    if (experienceRelativeOffsetTop < (windowHeight / 2)) {
+        let experienceLi = document.querySelectorAll(".experience-container-li");
+        experienceLi.forEach((element)=>{
+            let elementOffsetTop = element.offsetTop;
+            let elementRelativeOffsetTop = elementOffsetTop - scrollY;
+
+            if (elementRelativeOffsetTop < (windowHeight / 2)) {
+                element.classList.add("active");
+            } else {
+                if (element.classList.contains("active"))
+                    element.classList.remove("active");
+            };
+        });
+    } else {
+        let experienceLi = document.querySelectorAll(".experience-container-li");
+        experienceLi.forEach((element)=>{
+            if (element.classList.contains("active"))
+                    element.classList.remove("active");
+        });
+    }
+
     if (skillContainerPerScroll < skillArr.length && skillContainerPerScroll >= 0) {
         if (positiveScrollDirection === true && (skillArr.item(skillContainerPerScroll).getAttribute("id") === null)) {
-            console.log("play – active hinzugefügt");
             for (let i = 0; i <= skillContainerPerScroll; i++) {
                 skillArr.item(i).setAttribute("id", "active");
             };
         } else if (positiveScrollDirection === false && (skillArr.item(skillContainerPerScroll).getAttribute("id") === "active")) {
-            console.log("reverse – active reset");
             for (let i = 0; i <= skillArr.length - 1; i++) {
                 skillArr.item(i).removeAttribute("id");
             };
-            console.log("reverse – active renew");
             for (let j = 0; j <= skillContainerPerScroll; j++) {
                 skillArr.item(j).setAttribute("id", "active");
             };
@@ -135,6 +153,5 @@ window.addEventListener("scroll", (e) => {
         };
     };
     motivation.innerHTML = wordArrFromMotivation.join(" ");
-
 
 });

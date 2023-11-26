@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'ppmigra';
-    src: url('/fonts/PPMigra-Regular.woff2') format("woff2"), url("/fonts/PPMigra-Regular.woff") format("woff");
+    src: url('/projects/fonts/PPMigra-Regular.woff2') format("woff2"), url("/projects/fonts/PPMigra-Regular.woff") format("woff");
     font-weight:normal;
 }
 
 @font-face{
     font-family: "ppagrandir-wide";
-    src: url('/fonts/PPAgrandir-WideLight.woff2') format("woff2"), url("/fonts/PPAgrandir-WideLight.woff") format("woff");
+    src: url('/projects/fonts/PPAgrandir-WideLight.woff2') format("woff2"), url("/projects/fonts/PPAgrandir-WideLight.woff") format("woff");
     font-weight: lighter;
 }
 
 @font-face{
     font-family: "ppagrandir-grande";
-    src: url('/fonts/PPAgrandir-GrandRegular.woff2') format("woff2"), url("/fonts/PPAgrandir-GrandRegular.woff") format("woff");
+    src: url('/projects/fonts/PPAgrandir-GrandRegular.woff2') format("woff2"), url("/projects/fonts/PPAgrandir-GrandRegular.woff") format("woff");
     font-weight: normal;
 }
 
 @font-face{
     font-family: "ppagrandir";
-    src: url('/fonts/PPAgrandir-Regular.woff2') format("woff2"), url("/fonts/PPAgrandir-Regular.woff") format("woff");
+    src: url('/projects/fonts/PPAgrandir-Regular.woff2') format("woff2"), url("/projects/fonts/PPAgrandir-Regular.woff") format("woff");
     font-weight: normal;
 }
 
