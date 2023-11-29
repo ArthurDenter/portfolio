@@ -39,7 +39,7 @@
             <h1>Say Hi!</h1>
         </div>
         <div class="content-sayhi-form">
-            <form id="Mailform">
+            <form id="mailform" method="post" action="/server/send" enctype="multipart/form-data">
                 <fieldset>
                     <div>
                         <label for="fname">Vorname:</label><br>
@@ -65,11 +65,11 @@
                     </div>
                 </fieldset>
                 <p>bitte vor dem Absenden ausfüllen</p>
-                <div class="content-container-button"><button type="submit">senden</button></div>
+                <div class="content-container-button"><button type="submit" value="submit">senden</button></div>
             </form>
         </div>
         <script src="/landing/script/navscript.js"></script>
-        <script src="/landing/script/submit_form_script.js"></script>
+        <script src="/landing/script/sendmail.js"></script>
     </section>
     <footer class="footer">
         <div><a href="/index.html">© Jörg Adomaitis</a></div>

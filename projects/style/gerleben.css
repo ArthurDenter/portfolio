@@ -51,6 +51,7 @@
 }
 
 .content-container-description-1 {
+        padding: 3rem 1rem 3rem 1rem;
         column-count: 2;
         grid-column-start: 1;
         grid-column-end: 3;
@@ -66,6 +67,7 @@
 }
 
 .content-container-description-2 {
+        padding: 3rem 1rem 6rem 1rem;
         column-count: 2;
         grid-column-start: 1;
         grid-column-end: 3;

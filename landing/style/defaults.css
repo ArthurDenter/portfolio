@@ -409,7 +409,7 @@ template {
 }
 
 html {
-    font-size: 1.8vmax;
+    font-size: 1.2vmax;
 }
 
 body {
@@ -417,6 +417,7 @@ body {
     font-weight: 400;
     font-style: normal;
     /* background-color: #F1F1F1; */
+    background-color: #EEF6FB;
 }
 
 h1,
@@ -496,6 +497,10 @@ h3 {
 
 .content-section {
     padding-top: 0;
+    max-width: 66vw;
+    /* background-color: #F1F1F1; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content-section-fixed {
@@ -539,9 +544,9 @@ h3 {
     text-align: center;
 }
 
-@media screen and (max-width: 400px) and (orientation:portrait) {
+@media screen and (max-width: 440px) and (orientation:portrait) {
     html {
-        font-size: 1.25vmax;
+        font-size: 1.1vmax;
     }
 
     .navbar,
@@ -598,5 +603,9 @@ h3 {
         margin: 0;
         padding: 0.5rem 0 0 0;
         text-align: center;
+    }
+    .content-section {
+        padding-top: 0;
+        max-width: 100%
     }
 }
