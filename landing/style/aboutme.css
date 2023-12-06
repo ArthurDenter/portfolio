@@ -58,7 +58,7 @@ article {
 }
 
 .portrait {
-    width: 30vw;
+    width: 25vw;
     border-radius: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -208,7 +208,7 @@ article {
 
 .projects {
     text-align: center;
-    padding: 4rem 2rem 12rem 2rem;
+    padding: 2rem 2rem 12rem 2rem;
 }
 
 .projects-link img{
@@ -248,4 +248,37 @@ mark {
 
 mark {
     background-color: transparent;
+}
+
+.download-cv{
+    padding: 3.6em 2rem 3.6rem 2rem;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.download-cv a {
+    font-family: "ppagrandir-wide";
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+    color: #0A210F;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    padding: 2rem;
+    border: 0.1rem solid #0A210F;
+    border-radius: 50%;
+    background-color: #EEF6FB;
+}
+
+.fa-solid{
+    width: 2.7rem;
+}
+
+@media screen and (max-width: 440px) and (orientation:portrait)  {
+    .experience-siblings-timeline {
+        height: 0.1rem;
+        width: 30%;
+        background-color: #0A210F;
+        margin-top: 2.5rem;
+    }
 }

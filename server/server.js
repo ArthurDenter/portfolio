@@ -1,20 +1,25 @@
-const express = require("express");
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-const multiparty = require("multiparty");
-require("dotenv").config();
+const https = require('node:https');
+const fs = require('node:fs');
 
+const express = require("../nodevenv/server-node/10/lib/node_modules/express");
+const cors = require("../nodevenv/server-node/10/lib/node_modules/cors");
+const nodemailer = require("../nodevenv/server-node/10/lib/node_modules/nodemailer");
+const multiparty = require("../nodevenv/server-node/10/lib/node_modules/multiparty");
+require("../nodevenv/server-node/10/lib/node_modules/dotenv").config();
+
+const key = fs.readFileSync('./certs/c570d_507cd_00e6de723b4f263bcb193641b210c787.pem');
+const cert = fs.readFileSync('./certs/adomaitis_xyz_c570d_507cd_1708819199_1137cc290a4443bef610a0ce8dd51d2b.pem');
 const app = express();
+const server = https.createServer({key: key, cert: cert }, app);
+const PORT = process.env.PORT || 5000;
 
 // cors
 app.use(cors({ origin: "*" }));
 
-app.use("/public", express.static(process.cwd() + "/public")); //make public static
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}...`);
+server.listen(PORT, () => { 
+    console.log(`Listening on port ${PORT}...`); 
 });
+
 
 const transporter = nodemailer.createTransport({
     host: "mail.adomaitis.xyz",
@@ -33,7 +38,11 @@ transporter.verify(function (error, success) {
     };
 });
 
-app.post("/send", (req, res) => {
+app.get('/', (req, res) => { 
+    res.send('this is an secure server'); 
+});
+
+app.post("/", (req, res) => {
     let form = new multiparty.Form();
     let data = {};
     form.parse(req, function (err, fields) {
@@ -53,16 +62,16 @@ app.post("/send", (req, res) => {
         transporter.sendMail(mail, (err, data) => {
             if (err) {
                 console.log(err);
-                res.status(500).send("Something went wrong.");
+                res.json("Something went wrong.");
             } else {
-                res.status(200).send("Email successfully sent to recipient!");
+                res.json("Email successfully sent to recipient!");
             };
         });
     });
 });
 
 //Index page (static HTML)
-app.route("/").get(function (req, res) {
-    res.sendFile(process.cwd() + "/public/index.html");
-  });
+// app.route("/").get(function (req, res) {
+//     res.sendFile(process.cwd() + "/index.html");
+//   });
   

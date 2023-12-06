@@ -543,6 +543,26 @@ h3 {
     text-align: center;
 }
 
+.fa-regular::after,
+.fa-brands::after{
+    font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.fa-github::after{
+    content: " GitHub";
+}
+
+.fa-linkedin-in::after{
+    content: " LinkedIn";
+}
+
+.fa-envelope::after{
+    content: " Kontakt";
+}
+
 @media screen and (max-width: 440px) and (orientation:portrait) {
     html {
         font-size: 1.1vmax;
@@ -557,6 +577,10 @@ h3 {
 
     .footer {
         padding: 1rem 0.562rem 3rem 0.562rem;
+    }
+
+    .footer-links{
+        gap: 1.2rem;
     }
 
     .navbar h1,
@@ -609,4 +633,23 @@ h3 {
         max-width: 100%
     }
 
+    .fa-regular::after,
+    .fa-brands::after {
+        font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+    .fa-github::after {
+        content: "";
+    }
+
+    .fa-linkedin-in::after {
+        content: "";
+    }
+
+    .fa-envelope::after {
+        content: "";
+    }
 }

@@ -1,22 +1,22 @@
 @font-face {
     font-family: 'ppmigra';
     src: url('/landing/fonts/PPMigra-Regular.woff2') format("woff2"), url("/landing/fonts/PPMigra-Regular.woff") format("woff");
-    font-weight:normal;
+    font-weight: normal;
 }
 
-@font-face{
+@font-face {
     font-family: "ppagrandir-wide";
     src: url('/landing/fonts/PPAgrandir-WideLight.woff2') format("woff2"), url("/landing/fonts/PPAgrandir-WideLight.woff") format("woff");
     font-weight: lighter;
 }
 
-@font-face{
+@font-face {
     font-family: "ppagrandir-grande";
     src: url('/landing/fonts/PPAgrandir-GrandRegular.woff2') format("woff2"), url("/landing/fonts/PPAgrandir-GrandRegular.woff") format("woff");
     font-weight: normal;
 }
 
-@font-face{
+@font-face {
     font-family: "ppagrandir";
     src: url('/landing/fonts/PPAgrandir-Regular.woff2') format("woff2"), url("/landing/fonts/PPAgrandir-Regular.woff") format("woff");
     font-weight: normal;
@@ -544,6 +544,26 @@ h3 {
     text-align: center;
 }
 
+.fa-regular::after,
+.fa-brands::after {
+    font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.fa-github::after {
+    content: " GitHub";
+}
+
+.fa-linkedin-in::after {
+    content: " LinkedIn";
+}
+
+.fa-envelope::after {
+    content: " Kontakt";
+}
+
 @media screen and (max-width: 440px) and (orientation:portrait) {
     html {
         font-size: 1.1vmax;
@@ -558,6 +578,10 @@ h3 {
 
     .footer {
         padding: 1rem 0.562rem 3rem 0.562rem;
+    }
+
+    .footer-links{
+        gap: 1.2rem;
     }
 
     .navbar h1,
@@ -604,8 +628,29 @@ h3 {
         padding: 0.5rem 0 0 0;
         text-align: center;
     }
+
     .content-section {
         padding-top: 0;
         max-width: 100%
+    }
+
+    .fa-regular::after,
+    .fa-brands::after {
+        font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+    }
+
+    .fa-github::after {
+        content: "";
+    }
+
+    .fa-linkedin-in::after {
+        content: "";
+    }
+
+    .fa-envelope::after {
+        content: "";
     }
 }

@@ -20,7 +20,7 @@
 .project-article .project-container-image {
     flex: 0 0 50%;
     aspect-ratio: 1.06/1;
-    background-color: blue;
+    background-color: white;
     overflow: hidden;
 }
 
@@ -64,6 +64,11 @@
     max-height: 2.3rem;
 }
 
+.project-link-more svg {
+    max-height: 3.3rem;
+    width: auto;
+}
+
 .project-link-more {
     text-align: left;
 }
@@ -74,4 +79,16 @@
 
 .project-container-description p {
     margin: 0;
+}
+
+.arrow{
+    fill: none;
+}
+
+svg:hover .more{
+    transform: translateX(-0.1rem);
+}
+
+.project-container-description:nth-child(odd) svg:hover .more{
+    transform: translateX(0.1rem);
 }

@@ -1,5 +1,5 @@
 const sendMail = (mail) => {
-    fetch("http://localhost:3000/send", {
+    const fetchPromise = fetch("https://server.adomaitis.xyz:3000/", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         body: mail,
     }).then((response) => {
@@ -7,8 +7,9 @@ const sendMail = (mail) => {
             throw new Error(`HTTP error! Status: ${response.status}`);
         };
         return response.json();
-    });
+    }).then(alert);
 };
+
 
 const form = document.getElementById("mailform");
 
