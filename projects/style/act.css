@@ -30,10 +30,11 @@
     font-size: 1.771rem;
     font-weight: 400;
     color: #0A210F;
-    background-color: #ffffff;
+    background-color: var(--grey);
     text-align: center;
     padding: 3rem 3rem 3rem 3rem;
     margin: 0;
+    font-family: var(--serif-font);
 }
 
 .content-container-apparel-con-temporary {

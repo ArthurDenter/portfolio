@@ -1,3 +1,12 @@
+body{
+    font-family: var(--grotesk-font);
+}
+
+.content-section{
+    padding-bottom: 3rem;
+    background-color: var(--grey);
+}
+
 .content-section ul,
 .content-section ol {
     list-style-type: none;
@@ -18,14 +27,15 @@
 p {
     display: block;
     text-align: center;
-    /* background-color: #FF2E00; */
+    /* background-color: var(--highlight); */
     padding: 3rem 3rem 3rem 3rem;
 }
 
 .content-container-sayhi h1 {
-    font-size: 1.5rem;
+    font-family: var(--serif-font);
+    font-size: 6rem;
     font-weight: 400;
-    color: #0A210F;
+    color: var(--green);
     text-align: center;
     padding: 1rem 1rem 1rem 1rem;
     margin: 0;
@@ -36,32 +46,28 @@ p {
     object-fit: cover;
 }
 
-.content-section {
-    padding-bottom: 3rem;
-    background-color: white;
-}
-
 .content-section div {
     overflow: hidden;
 }
 
 .content-section label {
     font-size: 1.333rem;
-    color: #0A210F;
+    color: var(--green);
     text-align: left;
     position: relative;
     top: 1.15rem;
     left: 3rem;
-    background-color: white;
+    background-color:var(--grey);
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 .content-section input[type=text],
 .content-section input[type=email] {
-    background-color: white;
-    color: #0A210F;
+    background-color:var(--grey);
+    color: var(--green);
     font-size: 1.25rem;
     padding: 1.5rem;
-    border: 1px solid #0A210F;
+    border: 1px solid var(--green);
     border-radius: 3rem;
     width: 100%;
     text-decoration: none;
@@ -97,52 +103,54 @@ textarea:focus {
 .content-section textarea {
     width: 100%;
     height: 30vmax;
-    border: 1px solid #0A210F;
+    border: 1px solid var(--green);
     resize: none;
     border-radius: 1.5rem;
     margin-top: 0.5rem;
     padding: 1.5rem 3rem 1.5rem 3rem;
-    background-color: white;
-    color: #0A210F;
+    background-color:var(--grey);
+    color: var(--green);
     font-size: 1.25rem;
 }
 
-.content-section button {
-    background-color: #FF2E00;
-    border: none;
-    color: white;
-    padding: 16px 32px;
+.content-container-button button{
     text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 3rem;
-    width: 100%;
+    border: none;
+    border-radius: 70px;
+    background: var(--green, #0A210F);
+    padding: 0.8rem 3.6rem;
+    color: var(--grey);
     font-size: 1.333rem;
+    font-family: var(--grotesk-font);
+}
+
+.content-container-button button:hover{
+    color: var(--highlight);
 }
 
 p {
     padding: 0rem;
-    color: #0A210F;
+    color: var(--green);
     font-size: 1.5rem;
 }
 
 p::before {
     content: "* ";
-    color: #FF2E00;
+    color: var(--highlight);
 }
 
 input::placeholder,
 textarea::placeholder {
     opacity: 0.25;
-    color: #0A210F;
+    color: var(--green);
 }
 
 input:invalid {
-    color: #FF2E00;
+    color: var(--highlight);
 }
 
 label:has(~input:required)::after,
 label:has(~textarea:required)::after {
     content: "*";
-    color: #FF2E00;
+    color: var(--highlight);
 }

@@ -32,7 +32,7 @@
     grid-row-start: 4;
     grid-row-end: 16;
     padding-top: 2.5rem;
-    background-color: white;
+    background-color: var(--grey);
 }
 
 .content-container-web img{
@@ -46,7 +46,7 @@
     grid-column-end: 3;
     grid-row-start: 16;
     grid-row-end:17;
-    background-color: white;
+    background-color: var(--grey);
     color: #0A210F;
     font-size: 1.333rem;
     padding: 1rem;
@@ -57,14 +57,14 @@
     grid-column-end: 2;
     grid-row-start: 8;
     grid-row-end: 12;
-    background-color: white;
+    background-color: var(--grey);
     color: #0A210F;
     font-size: 1.333rem;
     padding: 1rem;
 }
 
 .content-container-colors-typo {
-    background-color: white;
+    background-color: var(--grey);
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 12;

@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <nav class="navbar" id="navbar">
+        <nav class="navbar fade-in" id="navbar">
             <div class="logo-container"><a href="/index.html"><img src="/landing/content/default/navbar-logo.svg" alt=""></a>
             </div>
             <div class="title-container">
@@ -46,8 +46,8 @@
         <div class="timemarker-container">
             <div class="timemarker point" id="timemarker"></div>
         </div> -->
-        <article class="content-portrait-container">
-            <div><img class="portrait" id="portrait" src="/landing/content/aboutme/joerg.jpg" alt=""></div>
+        <article class="container content-portrait-container">
+            <div><img class="portrait" id="portrait" src="/landing/content/aboutme/joerg_bg_y.png" alt=""></div>
         </article>
         <article class="container name" id="name">
             <div id="name_container">
@@ -99,7 +99,7 @@
         <article class="container experience" id="experience">
             <div id="experience_container">
                 <ul>
-                    <li>
+                    <li class="experience-li">
                         <div class="experience-container-li">
                             <div class="experience-description">
                                 Diplomstudiengang Medientechnik <br>
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="experience-li">
                         <div class="experience-container-li">
                             <div class="experience-description">
                                 Digital Artist / Systemadministrator<br>
@@ -121,7 +121,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="experience-li">
                         <div class="experience-siblings">
                             <div class="experience-container-li">
                                 <div class="experience-date">
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="experience-li">
                         <div class="experience-container-li">
                             <div class="experience-date">
                                 03/2015 — 06/2019
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="experience-li">
                         <div class="experience-container-li">
                             <div class="experience-date">
                                 06/2019 — 01/2023
@@ -166,15 +166,18 @@
                         </div>
                     </li>
                 </ul>
-                <div class="download-cv">
+        </article>
+        <article class="container cv" id="cv">
+            <div class="download-cv">
                     <div id="download-cv-button"><a href="/landing/content/aboutme/CV_b.pdf" download="CV"><i class="fa-solid fa-file-pdf"></i></a></div>
                 </div>
             </div>
         </article>
         <article class="projects" id="projects">
             <div class="projects-link">
-                <a href="/projects/projects.html"><img src="/landing/content/aboutme/projects_button.svg" alt=""></a>
-                <p>(passwortgeschützter Bereich) <br> Bei Interesse schicke ich Ihnen gerne Ihre persönlichen Zugangsdaten zu. <br> Hinterlassen Sie mir dafür <a href="/contact.html">hier</a> eine kurze Nachricht.</p>
+                <!-- <a href="/projects/projects.html"><img src="/landing/content/aboutme/projects_button.svg" alt=""></a> -->
+                <button class="my-work-button" type="button" onclick="window.location.href='/projects/projects.html';">my work</button>
+                <p>(passwortgeschützter Bereich) <br> Bei Interesse schicke ich Ihnen gerne Ihre persönlichen Zugangsdaten zu. <br> Hinterlassen Sie mir dafür <a href="/contact.html">hier</a> bitte eine kurze Nachricht.</p>
             </div>
         </article>
     </section>

@@ -30,8 +30,8 @@
 .content-container-description-3,
 .content-container-description-4,
 .content-container-description-5 {
-        background-color: white;
-        color: #0A210F;
+        background-color: var(--grey);
+        color: var(--green);
         font-size: 1.333rem;
         padding: 1rem;
 }
@@ -43,11 +43,12 @@
         grid-row-end: 3;
         font-size: 1.771rem;
         font-weight: 400;
-        color: #0A210F;
-        background-color: #ffffff;
+        color: var(--green);
+        background-color: var(--grey);
         text-align: center;
         padding: 3rem 3rem 3rem 3rem;
         margin: 0;
+        font-family: var(--serif-font);
 }
 
 .content-container-description-1 {

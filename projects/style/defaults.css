@@ -1,24 +1,30 @@
 @font-face {
     font-family: 'ppmigra';
-    src: url('/projects/fonts/PPMigra-Regular.woff2') format("woff2"), url("/projects/fonts/PPMigra-Regular.woff") format("woff");
-    font-weight:normal;
-}
-
-@font-face{
-    font-family: "ppagrandir-wide";
-    src: url('/projects/fonts/PPAgrandir-WideLight.woff2') format("woff2"), url("/projects/fonts/PPAgrandir-WideLight.woff") format("woff");
-    font-weight: lighter;
-}
-
-@font-face{
-    font-family: "ppagrandir-grande";
-    src: url('/projects/fonts/PPAgrandir-GrandRegular.woff2') format("woff2"), url("/projects/fonts/PPAgrandir-GrandRegular.woff") format("woff");
+    src: url('/landing/fonts/PPMigra-Regular.woff2') format("woff2"), url("/landing/fonts/PPMigra-Regular.woff") format("woff");
     font-weight: normal;
 }
 
-@font-face{
+@font-face {
+    font-family: "ppagrandir-wide";
+    src: url('/landing/fonts/PPAgrandir-WideLight.woff2') format("woff2"), url("/landing/fonts/PPAgrandir-WideLight.woff") format("woff");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "ppagrandir-grande";
+    src: url('/landing/fonts/PPAgrandir-GrandRegular.woff2') format("woff2"), url("/landing/fonts/PPAgrandir-GrandRegular.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
     font-family: "ppagrandir";
-    src: url('/projects/fonts/PPAgrandir-Regular.woff2') format("woff2"), url("/projects/fonts/PPAgrandir-Regular.woff") format("woff");
+    src: url('/landing/fonts/PPAgrandir-Regular.woff2') format("woff2"), url("/landing/fonts/PPAgrandir-Regular.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ppneuemontreal";
+    src: url('/landing/fonts/PPNeueMontreal-Regular.woff2') format("woff2"), url("/landing/fonts/PPNeueMontreal-Regular.woff") format("woff");
     font-weight: normal;
 }
 
@@ -34,6 +40,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+
+
 html {
     line-height: 1.15;
     /* 1 */
@@ -47,6 +55,16 @@ html {
 /**
    * Remove the margin in all browsers.
    */
+
+
+:root{
+    --grey: #D9D9D9;
+    --highlight: #FBFF33;
+    --green: #0A210F;
+    --blue: #ACD2ED;
+    --grotesk-font : "ppneuemontreal";
+    --serif-font: "ppmigra";
+}
 
 body {
     margin: 0;
@@ -413,10 +431,9 @@ html {
 }
 
 body {
-    font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--grotesk-font), system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
     font-style: normal;
-    background-color: #EEF6FB;
 }
 
 h1,
@@ -428,7 +445,7 @@ h3 {
 
 .navbar,
 .footer {
-    background-color: #0A210F;
+    background-color: var(--grey);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -438,15 +455,26 @@ h3 {
     overflow: hidden;
 }
 
-.navbar-fixed {
+.navbar {
+    height: 2.5rem;
     position: fixed;
-    top: 0;
     width: 100%;
     z-index: 1;
+    transition: top 1s;
+    border-bottom: 1px solid var(--green, #0A210F);
+}
+
+.fade-in{
+    top: 0;
+}
+
+.fade-out{
+    top: -2.5rem;
 }
 
 .footer {
     padding: 1rem 0.562rem 3rem 0.562rem;
+    border-top: 1px solid var(--green, #0A210F);
 }
 
 .footer-links {
@@ -460,34 +488,34 @@ h3 {
 
 .navbar h1,
 .menu-container-toggled ul {
-    color: #ACD2ED;
+    color: var(--green);
     font-size: 1rem;
 }
 
 .navbar a,
 .footer a,
 .menu-container-toggled a {
-    color: #ACD2ED;
+    color: var(--green);
     text-decoration: none;
 }
 
 .navbar a:visited,
 .footer a:visited,
 .menu-container-toggled a:visited {
-    color: #ACD2ED;
+    color: var(--green);
 }
 
 .navbar a:hover,
 .footer a:hover,
 .menu-container-toggled a:hover {
-    color: #ACD2ED;
+    color: var(--green);
     text-decoration: underline;
 }
 
 .navbar a:active,
 .footer a:active,
 .menu-container-toggled a:active {
-    color: #ACD2ED;
+    color: var(--grren);
 }
 
 .get-back-container img {
@@ -496,10 +524,6 @@ h3 {
 
 .content-section {
     padding-top: 0;
-    max-width: 66vw;
-    /* background-color: #F1F1F1; */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .content-section-fixed {
@@ -517,7 +541,7 @@ h3 {
 .menu-container-toggled {
     position: fixed;
     display: block;
-    background-color: #0A210F;
+    background-color: var(--grey);
     padding: 1rem;
     top: 2.4rem;
     right: 0;
@@ -531,7 +555,7 @@ h3 {
 .menu-container-toggled p {
     text-align: center;
     font-weight: 600;
-    color: #ACD2ED;
+    color: var(--grren);
     margin: 0;
     padding-top: 1rem;
 }
@@ -544,22 +568,22 @@ h3 {
 }
 
 .fa-regular::after,
-.fa-brands::after{
-    font-family: "new-spirit", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.fa-brands::after {
+    font-family: var(--grotesk-font), system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
 }
 
-.fa-github::after{
+.fa-github::after {
     content: " GitHub";
 }
 
-.fa-linkedin-in::after{
+.fa-linkedin-in::after {
     content: " LinkedIn";
 }
 
-.fa-envelope::after{
+.fa-envelope::after {
     content: " Kontakt";
 }
 
@@ -575,17 +599,34 @@ h3 {
 
     }
 
+    .navbar {
+        height: 3.5rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        transition: 1s top;
+    }
+
+    .fade-in{
+        top: 0;
+    }
+    
+    .fade-out{
+        top: -3.5rem;
+    }
+
     .footer {
         padding: 1rem 0.562rem 3rem 0.562rem;
     }
 
-    .footer-links{
+    .footer-links {
         gap: 1.2rem;
     }
 
     .navbar h1,
     .menu-container-toggled ul {
-        color: #ACD2ED;
+        color: var(--grren);
         font-size: 1.5rem;
     }
 
@@ -601,7 +642,7 @@ h3 {
     .menu-container-toggled {
         position: fixed;
         display: block;
-        background-color: #0A210F;
+        background-color: var(--green);
         padding: 1rem;
         top: 2.4rem;
         right: 0;
@@ -616,7 +657,7 @@ h3 {
     .menu-container-toggled p {
         text-align: center;
         font-weight: 600;
-        color: #ACD2ED;
+        color: var(--grren);
         margin: 0;
         padding-top: 1rem;
     }

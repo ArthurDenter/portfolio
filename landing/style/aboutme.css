@@ -1,17 +1,17 @@
 .content-section {
     display: grid;
-    background-color: white;
+    background-color: var(--grey);
 }
 
 article {
-    padding: 8rem 2rem 8rem 2rem;
+    padding: 7rem 2rem 7rem 2rem;
 }
 
 .name>div,
 .address>div,
 .skills>div,
 .motivation>div {
-    background-color: white;
+    background-color: var(--grey);
     padding: 1rem;
 }
 
@@ -19,14 +19,14 @@ article {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
-    grid-row-end: 7;
+    grid-row-end: 12;
     display: flex;
 }
 
 .timeline {
     width: 0.1rem;
     height: 90%;
-    background-color: #0A210F;
+    background-color:var(--green);
     margin: auto;
 }
 
@@ -34,7 +34,7 @@ article {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
-    grid-row-end: 7;
+    grid-row-end: 11;
     display: flex;
 }
 
@@ -72,11 +72,11 @@ article {
 }
 
 .name h1 {
-    font-family: "ppmigra";
+    font-family: var(--serif-font);
     font-size: 6rem;
     line-height: 6rem;
     letter-spacing: -0.09rem;
-    color: #0A210F;
+    color: var(--green);
     font-weight: normal;
     text-align: center;
     margin: 0;
@@ -90,9 +90,9 @@ article {
 }
 
 .address p {
-    font-family: "ppagrandir-wide";
+    font-family: var(--grotesk-font);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: 0;
     color: #0A210F;
     letter-spacing: 0.05rem;
@@ -127,10 +127,11 @@ article {
 
 .skills li {
     display: inline;
-    color: #0A210F;
-    font-size: 1.333rem;
+    color: var(--green);
+    font-size: 1.5rem;
+    font-family: var(--grotesk-font);
     padding: 0.8rem 1.8rem 0.8rem 1.8rem;
-    border: 0.1rem solid #0A210F;
+    border: 0.1rem solid var(--green);
     -moz-hyphens: auto;
     -o-hyphens: auto;
     -webkit-hyphens: auto;
@@ -147,8 +148,8 @@ article {
 }
 
 .motivation h1 {
-    font-family: "ppmigra";
-    font-size: 2.25rem;
+    font-family: var(--serif-font);
+    font-size: 2.5rem;
     font-weight: 400;
     color: #0A210F;
     text-align: center;
@@ -160,7 +161,7 @@ article {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-end: 11;
 }
 
 .experience ul {
@@ -174,7 +175,7 @@ article {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: var(--grey);
     padding: 1rem;
 }
 
@@ -187,28 +188,42 @@ article {
 .experience-siblings-timeline {
     height: 0.1rem;
     width: 50%;
-    background-color: #0A210F;
+    background-color: var(--green);
     margin-top: 2.5rem;
 }
 
 .experience-description {
-    font-size: 1.333rem;
+    font-size: 2rem;
+    font-family: var(--serif-font);
 }
 
 .experience-date {
     padding: 0.5rem 1rem 0.5rem 1rem;
-    border: 0.1rem solid #0A210F;
-    color: white;
-    background-color: #0A210F;
+    border: 0.1rem solid var(--green);
+    color: var(--green);
+    /* background-color: var(--green); */
     border-radius: 3rem;
     margin: 0.5rem;
     width: fit-content;
-    font-family: "ppagrandir-grande";
+    font-family: var(--grotesk-font);
+    font-size: 1.25rem;
+}
+
+.cv {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    padding: 6rem 2rem 8rem 2rem;
 }
 
 .projects {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 12;
+    grid-row-end: 13;
     text-align: center;
-    padding: 2rem 2rem 12rem 2rem;
+    padding: 2rem 2rem 14rem 2rem;
 }
 
 .projects-link img {
@@ -219,16 +234,23 @@ article {
 .projects-link a:visited,
 .projects-link a:hover,
 .projects-link a:active {
-    color: #FF2E00;
+    color: var(--highlight);
     text-decoration: none;
 }
 
+.projects-link{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
 .projects p {
-    font-family: "ppagrandir-wide";
+    font-family: var(--grotesk-font);
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 1rem;
     margin: 0;
-    color: #0A210F;
+    color:var(--green);
     letter-spacing: 0.05rem;
 
 }
@@ -237,16 +259,22 @@ article {
 .active p,
 #active,
 mark {
-    color: #FF2E00;
+    color: var(--highlight);
+}
+
+#active{
+    background-color: var(--highlight);
+    border-width: 0px;
+    color: var(--green);
 }
 
 .active .experience-description {
-    color: #FF2E00;
+    color: var(--green);
 }
 
 .active .experience-date {
-    background-color: #FF2E00;
-    border: 0.1rem solid #FF2E00;
+    background-color: var(--highlight);
+    border: 0.1rem solid var(--highlight);
 }
 
 mark {
@@ -254,26 +282,32 @@ mark {
 }
 
 .download-cv {
-    padding: 3.6em 2rem 3.6rem 2rem;
+    /* padding: 3.6em 2rem 3.6rem 2rem; */
     text-align: center;
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
 }
 
 .download-cv div {
     
     letter-spacing: 0.05rem;
-    text-decoration: none;
+    font-family: var(--grotesk-font);
+    font-size: 1.5rem;
     padding: 2rem;
-    border: 0.1rem solid #0A210F;
+    border: 0.1rem solid var(--green);
     border-radius: 50%;
-    background-color: #EEF6FB;
+    background-color: var(--grey);
     display: inline-block;
     aspect-ratio: 1/1;
+    display: inline-flex;
+}
+
+.download-cv div:hover {
+    background-color: var(--highlight);
 }
 
 .download-cv a {
     color: #0A210F;
-    font-family: "ppagrandir-wide";
+    text-decoration: none;
     text-align: center;
     font-size: 2rem;
     margin: auto;
@@ -291,6 +325,22 @@ mark {
 .fa-solid {
     width: 2.7rem;
 }
+
+.my-work-button{
+    text-decoration: none;
+    border: none;
+    border-radius: 70px;
+    background: var(--green, #0A210F);
+    padding: 0.8rem 3.6rem;
+    color: var(--grey);
+    font-size: 1.333rem;
+    font-family: var(--grotesk-font);
+}
+
+.my-work-button:hover{
+    color: var(--highlight);
+}
+
 
 @-webkit-keyframes rotate-center {
     0% {
@@ -320,7 +370,23 @@ mark {
     .experience-siblings-timeline {
         height: 0.1rem;
         width: 30%;
-        background-color: #0A210F;
+        background-color: var(--green);
         margin-top: 2.5rem;
+    }
+
+    article{
+        padding: 14rem 2rem 14rem 2rem;
+    }
+
+    .portrait{
+        width: 14rem;
+    }
+
+    .experience ul {
+        gap: 28rem;
+    }
+
+    .cv{
+        padding: 10rem 2rem 18rem 2rem;
     }
 }

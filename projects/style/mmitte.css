@@ -25,11 +25,12 @@
     grid-row-end: 3;
     font-size: 1.771rem;
     font-weight: 400;
-    color: #0A210F;
-    background-color: #ffffff;
+    color: var(--green);
+    background-color: var(--grey);
     text-align: center;
     padding: 3rem 3rem 3rem 3rem;
     margin: 0;
+    font-family: var(--serif-font);
 }
 
 .content-container-brand-portrait {
@@ -54,8 +55,8 @@
 }
 
 .content-container-project-description-1 {
-    background-color: white;
-    color: #0A210F;
+    background-color: var(--grey);
+    color: var(--green);
     font-size: 1.333rem;
     padding: 0 1rem 1rem 1rem;
     grid-column-start: 2;
@@ -91,8 +92,8 @@
 }
 
 .content-container-project-description-2 {
-    background-color: white;
-    color: #0A210F;
+    background-color: var(--grey);
+    color: var(--green);
     font-size: 1.333rem;
     padding: 1rem;
     grid-column-start: 1;
